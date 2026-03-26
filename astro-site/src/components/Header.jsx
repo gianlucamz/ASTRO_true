@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 function Header() {
   return (
-    <header className="w-full border-b-2 shadow(custom:<>) bg-white">
+    <header className="w-full border-b-2 shadow-[0_3px_5px_0px_rgba(0,0,0,0.0)] bg-white">
       <div className="flex items-center">
         {/* Seção da esquerda (logo, search bar) */}
         <div className="p-1 ml-14 flex gap-14 items-center">
