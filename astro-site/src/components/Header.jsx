@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 function Header() {
   return (
-    <header className="w-full shadow bg-white">
+    <header className="w-full bg-white relative z-10" style={{ boxShadow: '0 4px 16px rgba(0,0,0,0.18)' }}>
       <div className="flex items-center">
         {/* Seção da esquerda (logo, search bar) */}
         <div className="p-1 ml-14 flex gap-14 items-center">
@@ -49,7 +49,7 @@ function Header() {
           />
 
           <Icon 
-            name="sunny-outline" 
+            name="star-outline" 
             className="text-3xl cursor-pointer" 
             />
 
