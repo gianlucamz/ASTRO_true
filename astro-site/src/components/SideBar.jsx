@@ -55,14 +55,14 @@ export default function AstroSidebar() {
           ))}
         </nav>
 
-        <div className="bg-gray-700 rounded-xl p-4 text-black">
-          <p className="font-semibold text-md mb-1">
+        <div className="bg-white shadow rounded-xl p-4 text-black">
+          <p className="font-bold text-md mb-1 leading-tight">
             Enfrentando algum problema?
           </p>
-          <p className="text-xs text-purple-200 mb-3">
+          <p className="text-xs text-black mb-3 font-inter font-semibold">
             Entre em contato com nosso suporte especializado!
           </p>
-          <button className="w-full bg-white text-purple-700 text-xs font-semibold py-2 rounded-lg hover:bg-purple-50 transition-colors">
+          <button className="w-full bg-purple-900 text-white text-sm font-semibold py-3 rounded-3xl transition-colors">
             Saiba Mais
           </button>
         </div>
