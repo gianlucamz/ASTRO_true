@@ -4,6 +4,7 @@ import './index.css'
 import { MainLayout } from './layouts/mainlayout.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Home from './pages/Home.jsx'
+import BuyCard from './pages/BuyCard.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
 
       <Route element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/produto" element={<BuyCard />} />
         </Route>
     </Routes>
 
