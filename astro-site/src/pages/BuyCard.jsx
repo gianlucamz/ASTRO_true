@@ -2,14 +2,20 @@ import { FaStar, FaStarHalfAlt, FaShoppingCart, FaThumbsUp } from "react-icons/f
 import { FaSearch } from "react-icons/fa";
 import amd from "../assets/AMD.jpg";
 import placa from "../assets/placa.webp";
+import placa2 from "../assets/placa2.webp";
+import placa3 from "../assets/placa3.webp";
+import placa4 from "../assets/placa4.webp";
+import placa5 from "../assets/placa5.webp";
+import placa6 from "../assets/placa6.webp";
+import placa7 from "../assets/placa7.webp";
+import placa8 from "../assets/placa8.webp";
 
 export default function BuyCard() {
   return (
     <div className="max-w-7xl mx-auto p-6">
-
       {/* BREADCRUMB */}
-      <div className="text-sm  flex gap-2 mb-6">
-        <span className="hover:underline cursor-pointer ">Hardware</span>
+      <div className="text-sm flex gap-2 mb-6">
+        <span className="hover:underline cursor-pointer">Hardware</span>
         <span> / </span>
         <span className="hover:underline cursor-pointer">Placa de Vídeo</span>
         <span> / </span>
@@ -18,34 +24,56 @@ export default function BuyCard() {
 
       {/* TOPO */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
         {/* IMAGENS */}
         <div className="flex flex-col gap-4">
           <img src={placa} alt="produto" className="w-full rounded-lg" />
 
           {/* MINIATURAS */}
-          <div className="flex gap-2">
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
-            <div className="w-16 h-16 border"></div>
+          <div className="flex gap-2 overflow-x-auto">
+            {[
+              placa,
+              placa2,
+              placa3,
+              placa4,
+              placa5,
+              placa6,
+              placa7,
+              placa8,
+            ].map((img, i) => (
+              <div
+                key={i}
+                className="w-16 h-16 border rounded-lg flex-shrink-0 cursor-pointer hover:border-purple-600 overflow-hidden"
+              >
+                <img
+                  src={img}
+                  alt={`miniatura ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
           </div>
 
           {/* DESCRIÇÃO RESUMIDA */}
           <div className="flex flex-col gap-3 mt-4">
-            <h2 className="text-lg font-bold uppercase">Descrição do Produto</h2>
+            <h2 className="text-lg font-bold uppercase">
+              Descrição do Produto
+            </h2>
             <p className="text-sm text-gray-700">
-              A Radeon RX 7600 GAMING OC 8G é uma placa de vídeo voltada para jogos em Full HD e Quad HD, com bom desempenho em títulos atuais. Possui clock boost de até 2.755 MHz e 8GB de memória GDDR6, com velocidade de 18Gbps e barramento de 128 bits.
+              A Radeon RX 7600 GAMING OC 8G é uma placa de vídeo voltada para
+              jogos em Full HD e Quad HD, com bom desempenho em títulos atuais.
+              Possui clock boost de até 2.755 MHz e 8GB de memória GDDR6, com
+              velocidade de 18Gbps e barramento de 128 bits.
             </p>
             <p className="text-sm text-gray-700">
-              É compatível com DirectX 12 Ultimate, oferecendo suporte a tecnologias como Ray Tracing e Variable Rate Shading. Também conta com recursos como AMD FidelityFX Super Resolution (FSR), para ganho de desempenho, e Radeon Image Sharpening (RIS), que melhora a nitidez das imagens.
+              É compatível com DirectX 12 Ultimate, oferecendo suporte a
+              tecnologias como Ray Tracing e Variable Rate Shading. Também conta
+              com recursos como AMD FidelityFX Super Resolution (FSR), para
+              ganho de desempenho, e Radeon Image Sharpening (RIS), que melhora
+              a nitidez das imagens.
             </p>
             <p className="text-sm text-gray-700">
-              Indicada para quem busca rodar jogos modernos com boa taxa de quadros e qualidade visual equilibrada.
+              Indicada para quem busca rodar jogos modernos com boa taxa de
+              quadros e qualidade visual equilibrada.
             </p>
           </div>
 
@@ -68,9 +96,21 @@ export default function BuyCard() {
 
             {/* COMENTÁRIOS */}
             {[
-              { nome: "Lucas Almeida", texto: "Placa muito boa pelo preço. Roda todos os jogos que testei em qualidade alta sem travar. Instalação simples e desempenho consistente." },
-              { nome: "Rafael Costa", texto: "Desempenho excelente em Full HD. Os jogos ficam fluidos e a qualidade gráfica é bem nítida. Atendeu totalmente o que eu precisava." },
-              { nome: "Bruno Martins", texto: "Gostei bastante. Silenciosa, não esquenta muito e entrega uma performance estável. Ótima opção para quem quer jogar bem sem gastar tanto." },
+              {
+                nome: "Lucas Almeida",
+                texto:
+                  "Placa muito boa pelo preço. Roda todos os jogos que testei em qualidade alta sem travar. Instalação simples e desempenho consistente.",
+              },
+              {
+                nome: "Rafael Costa",
+                texto:
+                  "Desempenho excelente em Full HD. Os jogos ficam fluidos e a qualidade gráfica é bem nítida. Atendeu totalmente o que eu precisava.",
+              },
+              {
+                nome: "Bruno Martins",
+                texto:
+                  "Gostei bastante. Silenciosa, não esquenta muito e entrega uma performance estável. Ótima opção para quem quer jogar bem sem gastar tanto.",
+              },
             ].map((review, i) => (
               <div key={i} className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
@@ -82,20 +122,20 @@ export default function BuyCard() {
                     <FaStar className="text-purple-600 text-sm" />
                     <FaStar className="text-purple-600 text-sm" />
                   </div>
-                </div >
-               
+                </div>
                 <p className="text-sm text-gray-700">{review.texto}</p>
-                <div key={i} className="flex flex-col gap-1 max-w-28">
-                <button className="flex items-center gap-2 border rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-100">
-                  É útil <FaThumbsUp /> (0)
-                </button>
+                <div className="flex flex-col gap-1 max-w-28">
+                  <button className="flex items-center gap-2 border rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-100">
+                    É útil <FaThumbsUp /> (0)
+                  </button>
                 </div>
               </div>
             ))}
 
-            <span className="text-purple-600 text-sm cursor-pointer underline">Ver mais</span>
+            <span className="text-purple-600 text-sm cursor-pointer first-line:underline">
+              Ver mais
+            </span>
           </div>
-
         </div>
 
         {/* INFO */}
@@ -120,9 +160,13 @@ export default function BuyCard() {
 
           {/* PREÇO */}
           <div className="flex flex-col">
-            <span className="text-3xl font-bold text-purple-600">R$ 1.699,99</span>
+            <span className="text-3xl font-bold text-purple-600">
+              R$ 1.699,99
+            </span>
             <span className="text-sm text-gray-500">À vista</span>
-            <span className="text-sm text-gray-500">Em até 12X de 141,66 sem juros</span>
+            <span className="text-sm text-gray-500">
+              Em até 12X de 141,66 sem juros
+            </span>
             <span className="text-sm text-purple-600">Em estoque</span>
           </div>
 
@@ -159,7 +203,9 @@ export default function BuyCard() {
 
           {/* DESCRIÇÃO DO PRODUTO */}
           <div className="mt-10 flex flex-col gap-4">
-            <h2 className="text-xl font-bold uppercase">Descrição do Produto</h2>
+            <h2 className="text-xl font-bold uppercase">
+              Descrição do Produto
+            </h2>
 
             <div>
               <p className="font-bold">Características:</p>
@@ -202,8 +248,14 @@ export default function BuyCard() {
 
             <div>
               <p className="font-bold">Observação:</p>
-              <p>* "Boost Clock" é a frequência máxima alcançável na GPU executando uma carga de trabalho intermitente.</p>
-              <p>* "Game Clock" é o clock esperado da GPU ao executar aplicativos de jogos típicos.</p>
+              <p>
+                * "Boost Clock" é a frequência máxima alcançável na GPU
+                executando uma carga de trabalho intermitente.
+              </p>
+              <p>
+                * "Game Clock" é o clock esperado da GPU ao executar aplicativos
+                de jogos típicos.
+              </p>
             </div>
 
             <div>
@@ -214,15 +266,38 @@ export default function BuyCard() {
 
             <div>
               <p className="font-bold">Garantia:</p>
-              <p>1 ano de garantia (3 meses de garantia legal + 9 meses de garantia contratual junto ao fabricante)</p>
+              <p>
+                1 ano de garantia (3 meses de garantia legal + 9 meses de
+                garantia contratual junto ao fabricante)
+              </p>
             </div>
 
             <div>
               <p className="font-bold">Peso:</p>
               <p>2500 gramas (bruto com embalagem)</p>
             </div>
-
           </div>
+        </div>
+      </div>
+
+      {/* PRODUTOS RELACIONADOS */}
+      <div className="mt-10">
+        <h2 className="text-lg font-bold uppercase mb-6">
+          Produtos Relacionados
+        </h2>
+        <div className="grid grid-cols-6 gap-4">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div
+              key={i}
+              className="flex flex-col gap-2 cursor-pointer border rounded-lg p-3 hover:shadow-md hover:border-purple-600"
+            >
+              <img src={placa} alt="produto" className="w-full rounded-lg" />
+              <p className="text-xs text-gray-700">
+                Placa de Vídeo RX 7600 GAMING OC 8G AMD Radeon Gigabyte, 8GB...
+              </p>
+              <span className="text-sm font-bold text-black">R$ 1.699,99</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
