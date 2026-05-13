@@ -1,7 +1,7 @@
 import Icon from "./Icon";
 import LogoTitle from "../assets/astro.jpeg";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer
       className="w-full bg-white relative z-10 p-8"
